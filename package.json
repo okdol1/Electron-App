@@ -1,11 +1,15 @@
 {
-  "main": "public/main.js",
+  "main": "src/main.js",
   "homepage": "./",
   "name": "milliman-toy-project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@electron/remote": "^2.0.8",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.10.16",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
