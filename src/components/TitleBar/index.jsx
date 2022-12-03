@@ -10,7 +10,7 @@ const styles = {
   height: 14,
 };
 
-const Header = () => {
+const TitleBar = () => {
   const ipc = ipcRenderer;
   const [isMaximize, setIsMaximize] = useState(false);
 
@@ -47,4 +47,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default TitleBar;
