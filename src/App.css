@@ -57,11 +57,41 @@ h1 {
 .side-bar {
   width: 230px;
   min-width: 230px;
-  border-right: 1px solid #eee;
+  border-right: 1px solid #c0c0c0;
   overflow-y: auto;
 }
 
 .main {
   flex-grow: 1;
   overflow-y: auto;
+}
+
+/* Collapse */
+.site-collapse-custom-panel {
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  padding: 0;
+  height: 23px;
+  align-items: center;
+  background-color: #dcdcdc;
+}
+.ant-collapse
+  > .ant-collapse-item
+  > .ant-collapse-header
+  .ant-collapse-header-text {
+  font-size: 10px;
+  font-family: "Inter", sans-serif;
+}
+.ant-collapse-borderless > .ant-collapse-item {
+  border-bottom: 1px solid #c0c0c0;
+}
+.ant-collapse-borderless > .ant-collapse-item > .ant-collapse-content {
+  background-color: #fff;
+}
+.ant-collapse .ant-collapse-content > .ant-collapse-content-box,
+.ant-collapse-borderless
+  > .ant-collapse-item
+  > .ant-collapse-content
+  > .ant-collapse-content-box {
+  padding: 0;
 }

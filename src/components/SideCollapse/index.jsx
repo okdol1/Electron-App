@@ -19,7 +19,7 @@ const SideCollapse = ({ data }) => {
             key={`${item}-${index}`}
             className="site-collapse-custom-panel"
           >
-            <p>1</p>
+            <div>1</div>
           </Panel>
         );
       })}
