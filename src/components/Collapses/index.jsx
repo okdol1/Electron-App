@@ -1,8 +1,10 @@
 import { CaretRightOutlined } from "@ant-design/icons";
 import { Collapse } from "antd";
-const { Panel } = Collapse;
+import TreeViews from "../TreeViews";
 
 const Collapses = ({ data }) => {
+  const { Panel } = Collapse;
+
   return (
     <Collapse
       bordered={false}
@@ -12,14 +14,13 @@ const Collapses = ({ data }) => {
       className="site-collapse-custom-collapse"
     >
       {data.map((item, index) => {
-        console.log(item);
         return (
           <Panel
             header={item.name}
             key={`${item}-${index}`}
             className="site-collapse-custom-panel"
           >
-            <div>1</div>
+            <TreeViews item={item} />
           </Panel>
         );
       })}

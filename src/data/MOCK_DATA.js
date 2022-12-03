@@ -1,14 +1,14 @@
 const MOCK_DATA = [
   {
     name: "Category 1",
-    item: [
+    folders: [
       {
         name: "Folder 1",
-        item: null,
+        files: null,
       },
       {
         name: "Folder 2",
-        item: [
+        files: [
           "File 1",
           "File 2",
           "File 3",
@@ -25,14 +25,14 @@ const MOCK_DATA = [
   },
   {
     name: "Category 2",
-    item: [
+    folders: [
       {
         name: "Folder 1",
-        item: null,
+        files: null,
       },
       {
         name: "Folder 2",
-        item: [
+        files: [
           "File 1",
           "File 2",
           "File 3",
