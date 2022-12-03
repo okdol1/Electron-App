@@ -2,7 +2,7 @@ import { CaretRightOutlined } from "@ant-design/icons";
 import { Collapse } from "antd";
 const { Panel } = Collapse;
 
-const SideCollapse = ({ data }) => {
+const Collapses = ({ data }) => {
   return (
     <Collapse
       bordered={false}
@@ -27,4 +27,4 @@ const SideCollapse = ({ data }) => {
   );
 };
 
-export default SideCollapse;
+export default Collapses;

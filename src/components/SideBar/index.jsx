@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import SideCollapse from "../SideCollapse";
+import Collapses from "../Collapses";
 import MOCK_DATA from "../../data/MOCK_DATA";
 
 const SideBar = () => {
@@ -11,7 +11,7 @@ const SideBar = () => {
 
   return (
     <div className="side-bar">
-      <SideCollapse data={data} />
+      <Collapses data={data} />
     </div>
   );
 };
