@@ -58,8 +58,10 @@ h1 {
   width: 230px;
   min-width: 230px;
   border-right: 1px solid #eee;
+  overflow-y: auto;
 }
 
 .main {
   flex-grow: 1;
+  overflow-y: auto;
 }
