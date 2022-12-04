@@ -8,9 +8,11 @@ import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 const StyledTreeItemRoot = styled(TreeItem)(() => ({
   [`& .${treeItemClasses.content}`]: {
     // 전체 제어
-    paddingLeft: 10,
-    display: "block",
     width: "auto",
+    display: "flex",
+    alignItems: "center",
+    height: 21,
+    padding: 0,
     "&.Mui-selected": {
       backgroundColor: "#ffffff",
     },

@@ -67,8 +67,6 @@ h1 {
 }
 
 /* Collapse */
-.site-collapse-custom-panel {
-}
 .ant-collapse > .ant-collapse-item > .ant-collapse-header {
   padding: 0;
   height: 23px;
@@ -87,6 +85,8 @@ h1 {
 }
 .ant-collapse-borderless > .ant-collapse-item > .ant-collapse-content {
   background-color: #fff;
+  border-top: 1px solid #c0c0c0;
+  height: 277px;
 }
 .ant-collapse .ant-collapse-content > .ant-collapse-content-box,
 .ant-collapse-borderless
