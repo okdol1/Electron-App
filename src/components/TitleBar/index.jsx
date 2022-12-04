@@ -12,14 +12,14 @@ const styles = {
 
 const TitleBar = () => {
   const ipc = ipcRenderer;
-  const [isMaximize, setIsMaximize] = useState(false);
+  const [checkMaximize, setCheckMaximize] = useState(false);
 
   const handleMinimizeApp = () => {
     ipc.send("minimizeApp");
   };
   const handleMaximizeApp = () => {
-    setIsMaximize((prev) => !prev);
-    if (isMaximize) {
+    setCheckMaximize((prev) => !prev);
+    if (checkMaximize) {
       ipc.send("restoreApp");
     } else {
       ipc.send("maximizeApp");
