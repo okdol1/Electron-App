@@ -7,7 +7,7 @@ const SideBar = () => {
 
   return (
     <div className="side-bar">
-      <Collapses category={categories} />
+      <Collapses categories={categories} />
     </div>
   );
 };

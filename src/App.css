@@ -1,7 +1,16 @@
+:root {
+  --main-color: #0181e4;
+  --sub-color: #eeeeee;
+  --border-color: #c7cacb;
+  --white: #ffffff;
+  --black: #000000;
+}
+
 body {
   margin: 0;
   font-size: 10px;
   font-family: "Inter", sans-serif;
+  overflow: hidden;
 }
 
 .drag {
@@ -32,7 +41,8 @@ h1 {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: #eee;
+  color: var(--white);
+  background-color: var(--main-color);
 }
 .title-bar .tool-buttons {
   position: absolute;
@@ -44,6 +54,8 @@ h1 {
   border: none;
   cursor: pointer;
   padding: 4px;
+  color: var(--white);
+  background-color: var(--main-color);
 }
 
 /* Main */
@@ -57,13 +69,11 @@ h1 {
 .side-bar {
   width: 230px;
   min-width: 230px;
-  border-right: 1px solid #c0c0c0;
-  overflow-y: auto;
+  border-right: 1px solid var(--border-color);
 }
 
 .main {
   flex-grow: 1;
-  overflow-y: auto;
 }
 
 /* Collapse */
@@ -71,7 +81,7 @@ h1 {
   padding: 0;
   height: 23px;
   align-items: center;
-  background-color: #dcdcdc;
+  background-color: var(--sub-color);
 }
 .ant-collapse
   > .ant-collapse-item
@@ -81,12 +91,7 @@ h1 {
   font-family: "Inter", sans-serif;
 }
 .ant-collapse-borderless > .ant-collapse-item {
-  border-bottom: 1px solid #c0c0c0;
-}
-.ant-collapse-borderless > .ant-collapse-item > .ant-collapse-content {
-  background-color: #fff;
-  border-top: 1px solid #c0c0c0;
-  height: 277px;
+  border-bottom: 1px solid var(--border-color);
 }
 .ant-collapse .ant-collapse-content > .ant-collapse-content-box,
 .ant-collapse-borderless
