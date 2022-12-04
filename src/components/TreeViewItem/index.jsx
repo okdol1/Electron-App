@@ -10,6 +10,7 @@ const StyledTreeItemRoot = styled(TreeItem)(() => ({
     // 전체 제어
     paddingLeft: 10,
     display: "block",
+    width: "auto",
     "&.Mui-selected": {
       backgroundColor: "#ffffff",
     },
