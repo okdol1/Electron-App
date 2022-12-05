@@ -54,6 +54,9 @@ img {
   background-color: var(--border-color);
 }
 
+.btn.btn-border-right {
+  border-right: 1px solid var(--white);
+}
 *:focus {
   outline: 0;
 }
@@ -124,9 +127,6 @@ h1 {
   justify-content: space-between;
   padding-right: 5px;
 }
-.panel-header > .btn.btn-border-right {
-  border-right: 1px solid var(--white);
-}
 .panel-header > .buttons {
   display: flex;
   align-items: center;
@@ -153,6 +153,16 @@ h1 {
   > .ant-collapse-content
   > .ant-collapse-content-box {
   padding: 0;
+}
+
+.add-folder {
+  height: 23px;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--gray);
+  margin-left: 17px;
 }
 
 /* Main */

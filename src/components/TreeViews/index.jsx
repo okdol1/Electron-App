@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import TreeView from "@mui/lab/TreeView";
 import { styled } from "@mui/material/styles";
 import TreeItem, { treeItemClasses } from "@mui/lab/TreeItem";
@@ -5,6 +7,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import FolderIcon from "@mui/icons-material/Folder";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
+import AddIcon from "@mui/icons-material/Add";
 
 const StyledTreeItemRoot = styled(TreeItem)(() => ({
   [`& .${treeItemClasses.content}`]: {
@@ -65,12 +68,71 @@ function StyledTreeItem(props) {
   );
 }
 
-const TreeViews = ({ category }) => {
+const TreeViews = ({ category, setCategories }) => {
+  const [checkCreate, setCheckCreate] = useState(false);
+  const [folderName, setFolderName] = useState("");
+
+  const handleClick = () => {
+    setCheckCreate((prev) => !prev);
+    setFolderName("");
+  };
+
+  const handleSubmit = () => {
+    const newFolders = [
+      ...category.folders,
+      {
+        id: uuidv4(),
+        name: folderName,
+        files: null,
+      },
+    ];
+    setCategories((prev) => {
+      return prev.map((item) => {
+        return item.name === category.name
+          ? { ...item, folders: newFolders }
+          : item;
+      });
+    });
+    handleClick();
+  };
+
   return (
     <TreeView
       aria-label="file system navigator"
       style={{ overflowY: "auto", height: "100%" }}
     >
+      {checkCreate ? (
+        <div className="side-bar-wrapper" style={{ marginLeft: 17 }}>
+          <input
+            type="text"
+            value={folderName}
+            onChange={(e) => setFolderName(e.target.value)}
+            className="create-input"
+            autoFocus
+          />
+          <button
+            onClick={handleSubmit}
+            className="btn btn-border-right"
+            disabled={folderName === "" ? true : false}
+          >
+            create
+          </button>
+          <button onClick={handleClick} className="btn">
+            cancel
+          </button>
+        </div>
+      ) : (
+        <div className="add-folder">
+          <AddIcon
+            sx={{ fontSize: 16, color: "#999" }}
+            onClick={handleClick}
+            className="pointer"
+          />
+          <div onClick={handleClick} className="pointer">
+            Add Folder
+          </div>
+        </div>
+      )}
       {category.folders
         ? category.folders.map((folder) => {
             return (

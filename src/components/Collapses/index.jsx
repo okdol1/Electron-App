@@ -28,7 +28,7 @@ const Collapses = ({ categories, setCategories }) => {
               key={category.id}
             >
               <Resizable position="bottom" height={277}>
-                <TreeViews category={category} />
+                <TreeViews category={category} setCategories={setCategories} />
               </Resizable>
             </Panel>
           );

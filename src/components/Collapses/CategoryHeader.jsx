@@ -2,7 +2,13 @@ import { useState } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 
-const CategoryHeader = ({ category, categories, setCategories }) => {
+const CategoryHeader = ({
+  category,
+  categories,
+  setCategories,
+  checkCreate,
+  handleClick,
+}) => {
   const [editName, setEditName] = useState("");
   const [checkEdit, setCheckEdit] = useState(false);
 
