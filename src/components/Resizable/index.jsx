@@ -62,10 +62,6 @@ const Resizable = ({
 };
 
 Resizable.defaultProps = {
-  width: null,
-  height: null,
-  minWidth: null,
-  minHeight: null,
   border: false,
 };
 
