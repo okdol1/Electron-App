@@ -4,6 +4,7 @@
   --border-color: #c7cacb;
   --white: #ffffff;
   --black: #000000;
+  --gray: #999999;
 }
 
 body {
@@ -117,6 +118,16 @@ h1 {
 }
 
 /* Collapse */
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5px;
+}
+.panel-header > .buttons {
+  display: flex;
+  align-items: center;
+}
 .ant-collapse > .ant-collapse-item > .ant-collapse-header {
   padding: 0;
   height: 23px;

@@ -58,6 +58,7 @@ const SideBar = () => {
             }}
             placeholder="Category name"
             className="create-input"
+            autoFocus
           />
           <button
             onClick={handleCreate}
@@ -68,7 +69,7 @@ const SideBar = () => {
           </button>
         </div>
       ) : null}
-      <Collapses categories={categories} />
+      <Collapses categories={categories} setCategories={setCategories} />
     </Resizable>
   );
 };
