@@ -37,7 +37,7 @@ const SideBar = () => {
       border={"right"}
     >
       <div className="side-bar-wrapper create-category">
-        <div>카테고리</div>
+        <div>Category</div>
         {checkCreate ? (
           <KeyboardArrowUpIcon
             fontSize="small"
