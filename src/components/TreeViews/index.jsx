@@ -71,31 +71,33 @@ const TreeViews = ({ category }) => {
       aria-label="file system navigator"
       style={{ overflowY: "auto", height: "100%" }}
     >
-      {category.folders.map((folder) => {
-        return (
-          <StyledTreeItem
-            nodeId={folder.id}
-            labelText={folder.name}
-            labelIcon={FolderIcon}
-            bgColor="#ffca26"
-            key={folder.id}
-          >
-            {folder.files
-              ? folder.files.map((file) => {
-                  return (
-                    <StyledTreeItem
-                      nodeId={file.id}
-                      labelText={file.name}
-                      labelIcon={InsertDriveFileIcon}
-                      bgColor="#8fcaf8"
-                      key={file.id}
-                    />
-                  );
-                })
-              : null}
-          </StyledTreeItem>
-        );
-      })}
+      {category.folders
+        ? category.folders.map((folder) => {
+            return (
+              <StyledTreeItem
+                nodeId={folder.id}
+                labelText={folder.name}
+                labelIcon={FolderIcon}
+                bgColor="#ffca26"
+                key={folder.id}
+              >
+                {folder.files
+                  ? folder.files.map((file) => {
+                      return (
+                        <StyledTreeItem
+                          nodeId={file.id}
+                          labelText={file.name}
+                          labelIcon={InsertDriveFileIcon}
+                          bgColor="#8fcaf8"
+                          key={file.id}
+                        />
+                      );
+                    })
+                  : null}
+              </StyledTreeItem>
+            );
+          })
+        : null}
     </TreeView>
   );
 };
