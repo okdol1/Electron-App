@@ -1,0 +1,96 @@
+:root {
+  --main-color: #0181e4;
+  --sub-color: #eeeeee;
+  --border-color: #c7cacb;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+body {
+  margin: 0;
+  font-size: 10px;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+.drag {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+h1 {
+  font-size: 10px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+
+/* Header */
+
+.title-bar {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: var(--white);
+  background-color: var(--main-color);
+}
+.title-bar .tool-buttons {
+  position: absolute;
+  right: 0;
+  top: auto;
+  bottom: auto;
+}
+.title-bar .tool-buttons .tool-button {
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: var(--white);
+  background-color: var(--main-color);
+}
+
+/* Main */
+
+.main-wrapper {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 30px);
+}
+
+.main {
+  flex-grow: 1;
+}
+
+/* Collapse */
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  padding: 0;
+  height: 23px;
+  align-items: center;
+  background-color: var(--sub-color);
+}
+.ant-collapse
+  > .ant-collapse-item
+  > .ant-collapse-header
+  .ant-collapse-header-text {
+  font-size: 10px;
+  font-family: "Inter", sans-serif;
+}
+.ant-collapse-borderless > .ant-collapse-item {
+  border-bottom: 1px solid var(--border-color);
+}
+.ant-collapse .ant-collapse-content > .ant-collapse-content-box,
+.ant-collapse-borderless
+  > .ant-collapse-item
+  > .ant-collapse-content
+  > .ant-collapse-content-box {
+  padding: 0;
+}
