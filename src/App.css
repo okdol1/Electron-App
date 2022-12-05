@@ -66,12 +66,6 @@ h1 {
   height: calc(100vh - 30px);
 }
 
-.side-bar {
-  width: 230px;
-  min-width: 230px;
-  border-right: 1px solid var(--border-color);
-}
-
 .main {
   flex-grow: 1;
 }

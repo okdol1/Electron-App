@@ -16,7 +16,7 @@ const Collapses = ({ categories }) => {
       {categories.map((category) => {
         return (
           <Panel header={category.name} key={category.id}>
-            <Resizable pos="bottom" height={277}>
+            <Resizable position="bottom" height={277}>
               <TreeViews category={category} />
             </Resizable>
           </Panel>
