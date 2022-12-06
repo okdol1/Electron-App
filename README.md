@@ -41,8 +41,8 @@ npm run electron:serve
 ```git
 git clone https://github.com/okdol1/Electron-App.git
 cd Electron-App
-git checkout -b feature/category-crud
-git pull origin feature/category-crud
+git checkout -b dev
+git pull origin dev --rebase
 npm install
 npm run electron:serve
 ```
