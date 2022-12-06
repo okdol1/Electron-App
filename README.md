@@ -31,6 +31,7 @@ Resizable Collapse TreeView
 
 ```git
 git clone https://github.com/okdol1/Electron-App.git
+cd Electron-App
 npm install
 npm run electron:serve
 ```
@@ -39,7 +40,8 @@ npm run electron:serve
 
 ```git
 git clone https://github.com/okdol1/Electron-App.git
-git branch -b feature/category-crud
+cd Electron-App
+git checkout -b feature/category-crud
 git pull origin feature/category-crud
 npm install
 npm run electron:serve
