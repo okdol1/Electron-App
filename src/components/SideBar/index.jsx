@@ -13,11 +13,11 @@ const SideBar = () => {
 
   const handleClick = () => {
     setCheckCreate((prev) => !prev);
+    setCategoryName("");
   };
 
   const handleCreate = () => {
     handleClick();
-    setCategoryName("");
     setCategories((prev) => [
       ...prev,
       {
