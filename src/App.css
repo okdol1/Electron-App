@@ -4,6 +4,7 @@
   --border-color: #c7cacb;
   --white: #ffffff;
   --black: #000000;
+  --gray: #999999;
 }
 
 body {
@@ -11,6 +12,16 @@ body {
   font-size: 10px;
   font-family: "Inter", sans-serif;
   overflow: hidden;
+  box-sizing: border-box;
+}
+
+input {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: inline-block;
 }
 
 .drag {
@@ -19,6 +30,35 @@ body {
 
 .no-drag {
   -webkit-app-region: no-drag;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.btn {
+  border: 1px solid var(--main-color);
+  color: var(--white);
+  background-color: var(--main-color);
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  font-size: 10px;
+  height: 19px;
+  transition: 0.3s;
+}
+.btn:disabled {
+  cursor: auto;
+  border: 1px solid var(--border-color);
+  color: var(--black);
+  background-color: var(--border-color);
+}
+
+.btn.btn-border-right {
+  border-right: 1px solid var(--white);
+}
+*:focus {
+  outline: 0;
 }
 
 h1 {
@@ -58,19 +98,39 @@ h1 {
   background-color: var(--main-color);
 }
 
-/* Main */
-
-.main-wrapper {
+/* Side bar */
+.side-bar-wrapper {
+  height: 23px;
   display: flex;
-  width: 100%;
-  height: calc(100vh - 30px);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3px;
 }
-
-.main {
+.create-category {
+  font-weight: 700;
+}
+.create-input {
   flex-grow: 1;
+  border: 1px solid var(--border-color);
+  font-size: 10px;
+  height: 19px;
+  padding: 0 4px;
+}
+.create-input:focus {
+  border: 1px solid var(--main-color);
 }
 
 /* Collapse */
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5px;
+}
+.panel-header > .buttons {
+  display: flex;
+  align-items: center;
+}
 .ant-collapse > .ant-collapse-item > .ant-collapse-header {
   padding: 0;
   height: 23px;
@@ -93,4 +153,26 @@ h1 {
   > .ant-collapse-content
   > .ant-collapse-content-box {
   padding: 0;
+}
+
+.add-folder {
+  height: 23px;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--gray);
+  margin-left: 17px;
+}
+
+/* Main */
+
+.main-wrapper {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 30px);
+}
+
+.main {
+  flex-grow: 1;
 }
